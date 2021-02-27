@@ -9,9 +9,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val photo = photo ("ejemplo", "12/10/2020", "des ejemplo")
+        val photo = photo ("ejemplo", "10/09/2018", "des ejemplo")
             button.setOnClickListener {
-            texto.text = photo.fecha
+            if (texto.text.toString() == "BabyMat") {
+                texto.text = photo.fecha
+            }else {
+                texto.text = "BabyMat"
+            }
         }
     }
 }
